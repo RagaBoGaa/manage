@@ -1,0 +1,676 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+
+/* ================================== Variables ==================================== */
+:root {
+  /* Primary */
+  --BrightRed: hsl(12, 88%, 59%);
+  --DarkBlue: hsl(228, 39%, 23%);
+
+  /* Neutral */
+  --DarkGrayishBlue: hsl(227, 12%, 61%);
+  --VeryDarkBlue: hsl(233, 12%, 13%);
+  --VeryPaleRed: hsl(13, 100%, 96%);
+  --VaryLightGray: hsl(0, 0%, 98%);
+
+  /* Container sizes */
+  --container-s: 750px;
+  --container-md: 970px;
+  --container-lg: 1170px;
+}
+
+/* ================================== Reset and general rules ==================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  /* background-color: var(--VeryDarkBlue); */
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--DarkBlue);
+}
+
+p {
+  line-height: 1.6;
+  color: var(--DarkGrayishBlue);
+}
+/* ================================== Components  ==================================== */
+.btn {
+  background-color: var(--BrightRed);
+  color: var(--VaryLightGray);
+  padding: 0.8rem 1.8rem;
+  border-radius: 2rem;
+  box-shadow: 0px 10px 10px -5px rgb(205 70 25 / 70%);
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+/* ================================== Container style and media  ==================================== */
+.container {
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: var(--container-s);
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: var(--container-md);
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: var(--container-lg);
+  }
+}
+
+/* ================================== Background img pattern  ==================================== */
+.bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 1700px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+}
+
+.bg {
+  position: absolute;
+  background: url(images/bg-tablet-pattern.svg) no-repeat center top / contain;
+  z-index: -1;
+}
+
+.pattern-1 {
+  width: 100%;
+  height: 700px;
+  transform: translate(485px, -160px);
+}
+
+.pattern-2 {
+  width: 100%;
+  height: 700px;
+  left: 0;
+  bottom: 0;
+  transform: translate(-770px, 0);
+}
+
+/* ================================== Header  ==================================== */
+
+header .menu {
+  cursor: pointer;
+  display: none;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 2rem;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  color: var(--DarkBlue);
+  font-size: 0.8rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+header nav ul li:hover {
+  color: var(--DarkGrayishBlue);
+}
+
+/* ================================== Landing Section  ==================================== */
+.landing-hero {
+  padding-block: 1rem;
+}
+
+.landing-hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landing-hero .container .main-heading {
+  flex-basis: 40%;
+}
+
+.landing-hero .container .main-heading h1 {
+  font-size: 3rem;
+}
+
+.landing-hero .container .main-heading p {
+  margin-block: 2rem;
+  width: 75%;
+}
+
+.landing-hero .container .hero-img {
+  flex-basis: 45%;
+}
+
+/* ================================== About Section  ==================================== */
+.about {
+  padding-block: 5rem;
+}
+
+.about .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about .container .title {
+  flex-basis: 40%;
+}
+
+.about .container .title h2 {
+  font-size: 2rem;
+}
+
+.about .container .title p {
+  width: 80%;
+  margin-block-start: 2rem;
+}
+
+.about .container .features {
+  flex-basis: 50%;
+}
+
+.about .container .features .feature {
+  margin-block-end: 2rem;
+}
+
+.about .container .features .feature-head span {
+  display: inline-block;
+  background-color: var(--BrightRed);
+  color: var(--VaryLightGray);
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+}
+
+.features .feature .feature-head {
+  margin-block-end: 1rem;
+}
+
+.features .feature .feature-content p {
+  width: 80%;
+}
+
+/* ================================== Testimonials Section  ==================================== */
+.testimonials {
+  padding-block: 5rem;
+  text-align: center;
+}
+
+.testimonials h2.title {
+  margin-block-end: 3rem;
+  font-size: 2rem;
+}
+
+.testimonials .slider {
+  width: 100%;
+  max-width: fit-content;
+  height: fit-content;
+  padding-block-start: 2.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.testimonials .slider::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonials .slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.testimonials .slider .card {
+  background-color: var(--VaryLightGray);
+  width: 540px;
+  height: auto;
+  flex-shrink: 0;
+  padding-inline: 1rem;
+  padding-block-start: 1.5rem;
+  padding-block-end: 2rem;
+  position: relative;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+
+  animation: cardFade 1s;
+  -webkit-animation: cardFade 1s linear;
+}
+
+@keyframes cardFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.testimonials .slider .card.active {
+  display: block;
+}
+
+.testimonials .slider .card:not(:last-child) {
+  margin-inline-end: 2rem;
+}
+
+.testimonials .slider .card img {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.testimonials .slider .card h3 {
+  margin-block: 2rem;
+}
+
+.testimonials .dots {
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.testimonials .dots .dot {
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--BrightRed);
+  margin-inline: 0.2rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+
+.testimonials .dots .dot.active {
+  background-color: var(--BrightRed);
+}
+
+.testimonials .btn {
+  margin-block-start: 2rem;
+}
+
+/* ================================== CTA Section  ==================================== */
+.cta {
+  margin-block-start: 5rem;
+  padding-block: 4rem;
+  background: url(images/bg-simplify-section-desktop.svg) var(--BrightRed)
+    no-repeat 140px -80px / cover;
+}
+
+.cta .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cta .container h2 {
+  flex-basis: 40%;
+  color: var(--VaryLightGray);
+  font-size: 2rem;
+}
+
+.cta .container .btn {
+  font-weight: 700;
+  color: var(--BrightRed);
+  background-color: var(--VaryLightGray);
+}
+
+/* ================================== Footer  ==================================== */
+footer {
+  background-color: var(--VeryDarkBlue);
+  padding-block: 4rem;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .container .logo-social {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+footer .container .logo-social .social svg {
+  transform: scale(0.9);
+  cursor: pointer;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+
+footer .container .logo-social .social svg:not(:last-child) {
+  margin-inline-end: 0.5rem;
+}
+
+footer .container .logo-social .social svg path {
+  transition: 0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+}
+
+footer .container .logo-social .social svg:hover path {
+  fill: var(--BrightRed);
+}
+
+footer .links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer .links ul li {
+  color: var(--VeryPaleRed);
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+}
+
+footer .links ul li:hover {
+  color: var(--BrightRed);
+}
+
+footer .links ul li:not(:last-child) {
+  margin-block-end: 12px;
+}
+
+footer form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+footer form input {
+  color: var(--BrightRed);
+  outline: none;
+  border: none;
+  padding: 13px 30px 13px 15px;
+  border-radius: 2rem;
+}
+
+footer form p {
+  color: var(--BrightRed);
+  margin-block-start: unset;
+  margin-inline-end: unset;
+  justify-content: unset;
+}
+
+footer form input:focus-within {
+  outline: 1px solid var(--BrightRed);
+}
+
+footer form button {
+  background-color: var(--BrightRed);
+  color: var(--VaryLightGray);
+  padding: 15px 25px;
+  border-radius: 30px;
+}
+
+footer form button:hover {
+  opacity: 0.8;
+}
+
+footer p {
+  font-size: 0.8rem;
+  margin-inline-end: 6rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* ================================== Media  ==================================== */
+@media (max-width: 768px) {
+  header .menu {
+    display: block;
+  }
+
+  header .container {
+    position: relative;
+  }
+
+  header .logo {
+    flex: 1;
+  }
+
+  header nav ul {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%);
+    background-color: #faf7f7;
+    padding: 15px;
+    width: 85%;
+    text-align: center;
+    display: none;
+  }
+
+  header nav ul.active {
+    display: block;
+  }
+
+  header .btn {
+    display: none;
+  }
+
+  /* ================================== Background img pattern  ==================================== */
+
+  .pattern-1 {
+    transform: translate(65px, -25px);
+  }
+
+  .pattern-2 {
+    transform: translate(190px, -580px);
+  }
+
+  /* ================================== Landing Section  ==================================== */
+  .landing-hero {
+    padding-block: 1rem;
+  }
+
+  .landing-hero .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .landing-hero .container .main-heading {
+    flex-basis: 100%;
+  }
+
+  .landing-hero .container .main-heading h1 {
+    font-size: 1.5rem;
+  }
+
+  .landing-hero .container .main-heading p {
+    width: 100%;
+  }
+
+  .landing-hero .container .hero-img {
+    flex-basis: 100%;
+  }
+
+  /* ================================== About Section  ==================================== */
+  .about {
+    padding-block: 5rem;
+  }
+
+  .about .container {
+    flex-direction: column;
+  }
+
+  .about .container .title {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .about .container .title p {
+    width: 100%;
+  }
+
+  .about .container .features {
+    flex-basis: 100%;
+  }
+
+  .features .feature .feature-head {
+    margin-block: 1rem;
+    background-color: var(--VeryPaleRed);
+  }
+
+  .features .feature .feature-head h3 {
+    font-size: 0.9rem;
+  }
+
+  .features .feature .feature-content p {
+    width: 100%;
+  }
+
+  /* ================================== Testimonials Section  ==================================== */
+  .testimonials {
+    padding-block: 0;
+  }
+
+  .testimonials h2.title {
+    margin-block-end: 3rem;
+    font-size: 2rem;
+  }
+
+  .testimonials .slider {
+    display: block;
+  }
+
+  .testimonials .slider .card {
+    width: 100%;
+    display: none;
+  }
+
+  .testimonials .slider .card.active {
+    display: block;
+  }
+
+  .testimonials .dots {
+    margin-block-start: 1rem;
+    display: flex;
+  }
+
+  /* ================================== CTA Section  ==================================== */
+  .cta {
+    background: url(images/bg-simplify-section-mobile.svg) var(--BrightRed)
+      no-repeat 0 -80px / contain;
+  }
+
+  .cta .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta .container h2 {
+    flex-basis: 100%;
+    margin-block-end: 2rem;
+  }
+
+  /* ================================== Footer  ==================================== */
+  footer {
+    padding-block: 2rem;
+  }
+
+  footer .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  footer .container .logo-social {
+    flex-direction: column-reverse;
+  }
+
+  footer .container .logo-social .social svg {
+    margin-inline: 0.9rem;
+    cursor: pointer;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+
+  footer .links {
+    margin-block: 2rem;
+  }
+
+  footer form button:hover {
+    opacity: 0.8;
+  }
+
+  footer p {
+    margin-block-start: 2rem;
+    margin-inline-end: 0;
+    justify-content: center;
+  }
+}
