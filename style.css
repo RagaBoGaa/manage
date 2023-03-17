@@ -259,7 +259,7 @@ header nav ul li:hover {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  overflow-x: auto;
+  overflow-x: scroll;
   overscroll-behavior-inline: contain;
 }
 
